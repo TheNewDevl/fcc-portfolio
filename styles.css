@@ -84,19 +84,26 @@ nav a:hover {
 }
 
 .mutable-content:nth-child(2) {
-    animation: Write 8000ms ease-in infinite;
+    animation: Write 8000ms cubic-bezier(.85, .09, .94, .91) infinite;
+    color: #61aee8;
 }
 
 .mutable-content:nth-child(3) {
-    animation: Write 8000ms ease-in infinite 2000ms;
+    animation: Write 8000ms cubic-bezier(.85, .09, .94, .91) infinite 2000ms;
+    color: #02fd71;
+
 }
 
 .mutable-content:nth-child(4) {
-    animation: Write 8000ms ease-in infinite 4000ms;
+    animation: Write 8000ms cubic-bezier(.85, .09, .94, .91) infinite 4000ms;
+    color: #3168f1;
+
 }
 
 .mutable-content:last-child {
-    animation: Write 8000ms ease-in infinite 6000ms;
+    animation: Write 8000ms cubic-bezier(.85, .09, .94, .91) infinite 6000ms;
+    color: #e067ff;
+
 }
 
 
@@ -120,7 +127,7 @@ nav a:hover {
 
 
 .welcome-section-title {
-    transform: translateY(-50%);
+    margin-top: -300px;
     line-height: 10vh;
     line-height: clamp(45px, 10vh, 250px);
     font-size: 5vw;
@@ -129,22 +136,29 @@ nav a:hover {
 }
 
 /* Arrow */
+.arrow-link {
+    display: block;
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
 
 .arrow {
+    margin: 1em auto;
+    position: relative;
     width: 100px;
     height: 100px;
     border: 2px solid #fff;
     border-radius: 50%;
-    position: absolute;
-    top: 70%;
-    cursor: pointer;
     transition: transform 300ms ease-in-out;
 }
 
 .arrow:hover {
     transform: scale(1.1) rotate(90deg);
     animation: move-arrow 1000ms ease-in-out infinite;
-
 }
 
 .arrow:after {
@@ -182,13 +196,13 @@ nav a:hover {
 
 @keyframes move-arrow {
     0% {
-        margin-top: 0;
+        margin-top: 1em;
     }
     50% {
-        margin-top: 20px;
+        margin-top: 2em;
     }
     80% {
-        margin-top: 0;
+        margin-top: 1em;
     }
 }
 
