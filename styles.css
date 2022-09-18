@@ -321,3 +321,16 @@ nav a:hover {
         width: 31%;
     }
 }
+
+.arrow-link.second {
+    width: 100%;
+    position: relative;
+}
+
+.code-link.show-more {
+    top: auto;
+    right: auto;
+    position: relative;
+    margin: 0 auto 2em auto;
+    text-align: center;
+}
