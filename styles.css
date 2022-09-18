@@ -26,6 +26,8 @@ html {
 
 :root {
     --max-width: 1280px;
+    --primary-color: #023dfd;
+    --radius: 5px;
 }
 
 /* Global */
@@ -42,6 +44,7 @@ header {
     position: fixed;
     width: 100%;
     background: #1c1c1c;
+    z-index: 1000;
 }
 
 nav {
@@ -209,6 +212,112 @@ nav a:hover {
 /* PROJETS */
 
 #projects {
-    height: 100vh;
+    background: #000000;
+    height: 100%;
+    min-height: 100vh;
 }
 
+#projects .inner {
+    padding: 1em;
+}
+
+.projects-title {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 2em;
+}
+
+/* cards */
+.project-card {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    max-height: 600px;
+    height: 100vw;
+    background: var(--primary-color);
+    margin-bottom: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius);
+    transition: transform 200ms ease-in;
+}
+
+.project-card:hover {
+    transform: scale(105%);
+}
+
+.invisible-link {
+    position: absolute;
+    inset: 0;
+}
+
+.img-container {
+    width: 100%;
+    height: calc(100% - 30px);
+}
+
+.project-card img {
+    border-top-right-radius: var(--radius);
+    border-top-left-radius: var(--radius);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.project-card p {
+    padding: 0.2em 1em;
+    text-align: center;
+}
+
+.project-card p a {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.code-link {
+    display: block;
+    background: var(--primary-color);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border-radius: var(--radius);
+    padding: 5px 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background 300ms ease-in, right 300ms ease-in;
+}
+
+.code-link:hover {
+    background: #051d9b;
+    right: 2%;
+}
+
+@media screen and (min-width: 768px) {
+    #projects .inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 3em;
+    }
+
+    .project-card {
+        width: 48%;
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #projects .inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 3em;
+    }
+
+    .project-card {
+        width: 31%;
+    }
+}
