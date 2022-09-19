@@ -244,7 +244,7 @@ nav a:hover {
 }
 
 /* cards */
-.project-card {
+.project-tile {
     position: relative;
     width: 100%;
     min-height: 400px;
@@ -256,7 +256,7 @@ nav a:hover {
     transition: transform 200ms ease-in;
 }
 
-.project-card:hover {
+.project-tile:hover {
     transform: scale(1.05);
 }
 
@@ -270,7 +270,7 @@ nav a:hover {
     height: calc(100% - 30px);
 }
 
-.project-card img {
+.project-tile img {
     border-top-right-radius: var(--radius);
     border-top-left-radius: var(--radius);
     width: 100%;
@@ -279,13 +279,13 @@ nav a:hover {
     object-position: top;
 }
 
-.project-card h2 {
+.project-tile h2 {
     font-size: 1em;
     padding: 0.2em 1em;
     text-align: center;
 }
 
-.project-card h2 a {
+.project-tile h2 a {
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -407,7 +407,7 @@ i.heart {
         flex-direction: row;
     }
 
-    .project-card {
+    .project-tile {
         width: 47.5%;
     }
 
@@ -434,7 +434,7 @@ i.heart {
         padding: 3em;
     }
 
-    .project-card {
+    .project-tile {
         width: 31%;
     }
 
